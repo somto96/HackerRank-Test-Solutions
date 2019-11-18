@@ -7,7 +7,7 @@ const staircase = (n) => {
             console.log([
                 ...space,
                 ...hash
-            ].join());
+            ].join(''));
 
         }
     }
