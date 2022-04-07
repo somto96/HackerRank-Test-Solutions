@@ -46,4 +46,4 @@ const stringChecker = (data) => {
 	};
 };
 
-stringChecker(a);
+stringChecker(b);

@@ -1,0 +1,19 @@
+:-webkit-any(header, main, footer) p:hover {
+	color: blue;
+	cursor: pointer;
+}
+
+:-moz-any(header, main, footer) p:hover {
+	color: green;
+	cursor: pointer;
+}
+
+:matches(header, main, footer) p:hover {
+	color: indigo;
+	cursor: pointer;
+}
+
+:is(header, main, footer) p:hover {
+	color: red;
+	cursor: pointer;
+}
