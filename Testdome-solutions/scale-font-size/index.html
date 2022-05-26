@@ -1,0 +1,105 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+	</head>
+	<body>
+		<script>
+			function setup() {
+				$(".remove").click(function () {
+					let domElement = $(".remove").get(0);
+					$(`#${domElement.parentElement.id}`).hide();
+				});
+			}
+			document.body.innerHTML = `
+<div id="imgA" class="image">
+  <img src="https://bit.ly/3lmYVna" alt="First">
+  <button class="remove">X</button>
+</div>
+<div id="imgB" class="image">
+  <img src="https://bit.ly/3flyaMj" alt="Second">
+  <button class="remove">X</button>
+</div>`;
+            setup();
+			$(".remove")
+				.get(0)
+				.click();
+			console.log("test", $(".remove").get());
+			console.log(document.body.innerHTML);
+		</script>
+	</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Loading</title>
+		<!-- <style>
+        #loading-container {
+          position: absolute;
+          left: calc(50% - 25px);
+          top: 30%;
+        }
+
+        #loading-icon {
+          position: absolute;
+          top: 30px;
+          width: 50px;
+          height: 50px;
+          background-color: black;
+          animation: loading-animation 3s infinite;
+        }
+
+        @keyframes loading-animation {
+            /* Write your CSS solution here (do not edit the surrounding HTML) */
+            0% {
+              background-color: red;
+              transform: rotate(0deg);
+            }
+            
+            50% {
+              background-color: orange;
+              transform: rotate(360deg);
+            }
+            
+            100% {
+              background-color: red;
+              transform: rotate(720deg);
+            }
+        }
+    </style> -->
+	</head>
+	<body>
+		<!-- <div id="loading-container">
+      Loading
+      <span id="loading-icon"></span>
+    </div> -->
+		<script>
+			function scaleFontSize(parent, scalingFactor) {
+				// Write your code here
+                let childEls = parent.children;
+                for (let i = 0; i < childEls.length; i++) {
+                    let fontSize = childEls[i].style.fontSize
+                    childEls[i].style.setProperty('font-size', `calc(${childEls[i].style.fontSize} * ${scalingFactor})`);
+                    // childEls[i].style.fontSize = "calc(childEls[i].style.fontSize * scalingFactor)"
+                    console.log("Test-G", childEls[i].style.fontSize)
+                }
+			}
+
+			document.body.innerHTML = `
+  <div id = "textDiv">
+    <p style="font-size: 40px;">Apple</p>
+    <p style="font-size: 10px;">Pear</p>
+  </div>
+`;
+
+			scaleFontSize(document.getElementById("textDiv"), 0.5);
+            console.log("testEl", document.getElementById("textDiv").children[0].style.fontSize);
+			console.log(document.body.innerHTML);
+		</script>
+	</body>
+</html>
